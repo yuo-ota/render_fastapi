@@ -69,3 +69,7 @@ def index():
         </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+@app.post("/user")
+async def register_user(user):
+    return {"response": f"サーバです。{user}でユーザーを登録しました。"}
